@@ -1,0 +1,159 @@
+.Card {
+    margin: 15px 0;
+    padding: 15px;
+    min-height: 250px;
+    width: 100%;
+    background-color: #4a3f3f61;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1.7em;
+    font-weight: 500;
+    text-shadow: 5px 5px 5px #424242;
+
+    border-radius: 20px;
+    border: solid 2px rgba(128, 128, 128, 0.5);
+    box-shadow: 2px 2px 2px black;
+
+    transition: background-color 2s;
+}
+
+.Card--red {
+    background-color: rgb(110 28 28 / 55%);
+}
+
+.Card__info-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    place-items: center;
+
+    /*display: none;*/
+    animation: fadeIn 1s both;
+}
+
+.Card__title {
+    width: 100%;
+    text-align: right;
+}
+
+.Card__torso {
+    position: relative;
+}
+
+.Card__img {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(53, 40, 40, 0.70);
+    filter: contrast(0.8);
+    transition: opacity 0.2s;
+}
+
+.Card__img-bio {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.2em;
+    font-weight: 800;
+    text-shadow: 5px 5px 5px #424242;
+
+    pointer-events: none;
+}
+
+.Card__img:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.Card__full_title {
+    width: 100%;
+}
+
+.Card__reign {
+    width: 100%;
+    text-align: center;
+    grid-area: 2 / 2 / 3 / 3;
+
+    font-size: 0.8em;
+    FONT-WEIGHT: 200;
+}
+
+/*!CARD BIO-SITE*/
+.Card__bio-main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    animation: fadeIn 1s both;
+}
+
+.Card__bio-background-image {
+    /*background-image: url('../../public/Images/svg/eagle.svg');*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    right: 100%;
+    filter: invert(0.5) opacity(0.3);
+    z-index: -1;
+}
+
+.Card__bio-title {
+    text-align: center;
+}
+
+.Card__bio-reign {
+    font-size: 0.7em;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.Card__bio-content {
+    font-size: 0.9em;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.Card__bio-back {
+    margin-top: 15px;
+    padding: 2px;
+    font-size: 0.8em;
+    font-weight: 500;
+    text-align: center;
+
+    transition: transform .01s;
+}
+
+.Card__bio-back:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+/*animations*/
+.fadeOut {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

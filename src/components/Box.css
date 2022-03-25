@@ -1,0 +1,17 @@
+.Box {
+    padding: 15px;
+    height: 80vh;
+    width: 600px;
+
+    background-image: url('../../public/Images/textures/dust.png');
+
+    border: 2px solid #777777;
+    border-radius: 20px;
+}
+
+.Box__content {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}

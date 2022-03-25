@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React from "react";
+
+import {Box} from "./components/Box";
+import {caesars} from "./data/caesars";
+
 import './App.css';
+import {BackgroundVideo} from "./components/BackgroundVideo";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = () => {
+    return <>
+        <BackgroundVideo/>
+        <h1 className='App__main-title'>Julio-Claudian dynasty (27 BC – AD 68):</h1>
+        <Box caesarsList={caesars}/>
+    </>
+};
 
-export default App;
+
