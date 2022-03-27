@@ -1,8 +1,14 @@
 import React, {useState} from 'react';
 
 import './Box.css';
-import {Card} from "./Card";
-import {ApproveBox} from "./ApproveBox";
+import {Card} from './Card';
+import {ApproveBox} from './ApproveBox';
+import {playSound} from '../utils/playSound';
+
+
+//# audio:
+const hitSound = new Audio('Audio/hit.wav');
+hitSound.load();
 
 export const Box = props => {
 //  #state:
@@ -17,16 +23,21 @@ export const Box = props => {
     }
 
     const removeCaesarHandler = () => {
+        playSound(hitSound);
         setCaesarsList(prev => prev.filter(el => el.full_title !== caesarToDelete));
         setCaesarToDelete('');
         setShowApproveBox(false);
     }
 
+//  #return:
     return <>
-        {showApproveBox === true && <ApproveBox removeCaesar={removeCaesarHandler}/>}
-        <div className='Box'>
+        {showApproveBox === true && <ApproveBox
+            removeCaesar={removeCaesarHandler}
+            showApproveBox={showApproveBoxHandler}/>
+        }
+        <div className="Box">
             <div className="Box__content">
-                <ul className='Box__users-list'>
+                <ul className="Box__users-list">
                     {caesarsList.map(el => (
                         <Card
                             key={el.full_title}
@@ -35,10 +46,10 @@ export const Box = props => {
                             reign={el.reign}
                             picture={el.picture}
                             bio={el.bio}
-                            onImageClick={showApproveBoxHandler}
+                            showApproveBox={showApproveBoxHandler}
                         />
                     ))}
-            <img className='Box__img' src='Images/svg/eagle_footer.svg' alt='eagle logo'/>
+                    <img className="Box__img" src="Images/svg/eagle_footer.svg" alt="eagle logo"/>
                 </ul>
             </div>
         </div>

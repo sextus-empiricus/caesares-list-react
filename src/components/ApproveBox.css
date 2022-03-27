@@ -15,12 +15,72 @@
 }
 
 .ApproveBox__box {
+    padding: 60px;
     display: flex;
+    height: 300px;
+    width: 450px;
+
     flex-direction: column;
     justify-content: center;
-    height: 300px;
-    width: 400px;
-    background-color: green;
+
     text-align: center;
 
+    font-size: 1.7em;
+    font-weight: 500;
+    text-shadow: 5px 5px 5px #424242;
+    color: rgba(245, 245, 245, 0.85);
+    border-radius: 20px;
+    border: solid 2px rgba(128, 128, 128, 0.5);
+    box-shadow: 2px 2px 2px black;
+
+    background-image: url('../../public/Images/textures/xv.png');
+    background-color: rgb(61 1 1);
+}
+
+.ApproveBox__title {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.ApproveBox__title-2 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.ApproveBox__button {
+    position: relative;
+    margin: 20px 0;
+    padding: 5px;
+
+    font-family: inherit;
+    font-size: 1.2em;
+    color: inherit;
+    font-weight: 500;
+
+    background-color: #ffffff42;
+
+    border: 2px solid #b4b4b4;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #403a3a;
+    transition: border-color .2s, transform .2s;
+}
+
+.ApproveBox__button:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+
+    border-color: rgba(234, 234, 234, 0.85);
+}
+
+.ApproveBox__abandon {
+    padding: 3px;
+    font-size: 0.7em;
+    font-weight: 300;
+    transition: transform 0.1s;
+}
+
+.ApproveBox__abandon:hover {
+    cursor: pointer;
+    transform: scale(0.98);
 }
