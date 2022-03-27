@@ -38,6 +38,7 @@ export const Box = props => {
                             onImageClick={showApproveBoxHandler}
                         />
                     ))}
+            <img className='Box__img' src='Images/svg/eagle_footer.svg' alt='eagle logo'/>
                 </ul>
             </div>
         </div>

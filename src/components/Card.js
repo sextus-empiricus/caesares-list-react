@@ -43,7 +43,6 @@ export const Card = props => {
                         <img src='Images/svg/eagle.svg' className='Card__bio-background-image' alt='test'/>
                         <p className='Card__bio-title'>{props.fullTitle}</p>
                         <p className='Card__bio-reign'>{props.reign}</p>
-                        {/*<h2 className='Card__bio-h2'>Bio:</h2>*/}
                         <p className='Card__bio-content'>{props.bio}</p>
                         <p className='Card__bio-back'
                            onClick={flipCard}>back</p>
